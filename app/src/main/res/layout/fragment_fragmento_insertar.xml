@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginTop="96dp"
+        android:text="@string/cantidad"
+        app:layout_constraintEnd_toStartOf="@+id/et_cantidad"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="72dp"
+        android:layout_marginTop="88dp"
+        android:text="@string/objeto"
+        app:layout_constraintEnd_toStartOf="@+id/et_producto"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_grabar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="@string/grabar"
+        app:layout_constraintTop_toBottomOf="@+id/et_cantidad"
+        tools:layout_editor_absoluteX="130dp" />
+
+    <EditText
+        android:id="@+id/et_cantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:ems="10"
+        android:hint="Cantidad"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/et_producto"
+        tools:layout_editor_absoluteX="153dp" />
+
+    <EditText
+        android:id="@+id/et_producto"
+        android:layout_width="215dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="Producto"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="71dp" />
+</android.support.constraint.ConstraintLayout>
