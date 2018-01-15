@@ -18,13 +18,19 @@ public class FragmentoInsertar extends Fragment {
     EditText et_cantidad;
     EditText et_producto;
     Context contexto;
-
+    InsercionProducto insercion;
+    public interface InsercionProducto
+    {
+        void insertarProducto(Producto p);
+    }
     private View.OnClickListener oyente_boton=new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             String producto=et_producto.getText().toString();
             String cantidad=et_cantidad.getText().toString();
-            AccesoBD.grabarProducto(producto, cantidad,contexto);
+            insercion=(InsercionProducto)getActivity();
+            insercion.insertarProducto(new Producto(producto, cantidad, 999));
+
         }
     };
     public FragmentoInsertar() {

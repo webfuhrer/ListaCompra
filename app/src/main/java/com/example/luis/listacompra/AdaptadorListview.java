@@ -16,8 +16,13 @@ import java.util.List;
  * Created by luis on 15/12/2017.
  */
 
-public class AdaptadorListview implements ListAdapter{
+public class AdaptadorListview implements ListAdapter {
     private List<Producto> lista_productos;
+
+    public void setLista_productos(List<Producto> lista_productos) {
+        this.lista_productos = lista_productos;
+    }
+
     private Context contexto;
     public AdaptadorListview(List<Producto> lista_productos, Context contexto) {
         this.lista_productos = lista_productos;
